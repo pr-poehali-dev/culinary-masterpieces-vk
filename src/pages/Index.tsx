@@ -255,10 +255,13 @@ export default function Index() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredRecipes.map((recipe) => (
+            {filteredRecipes.map((recipe, index) => (
               <Dialog key={recipe.id}>
                 <DialogTrigger asChild>
-                  <Card className="group cursor-pointer overflow-hidden border-2 hover:border-primary transition-all duration-300 hover-scale hover:shadow-2xl">
+                  <Card 
+                    className="group cursor-pointer overflow-hidden border-2 hover:border-primary transition-all duration-300 hover-scale hover:shadow-2xl animate-fade-in"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
                     <CardHeader className="p-0 relative">
                       <div className="relative h-64 overflow-hidden">
                         <img 
