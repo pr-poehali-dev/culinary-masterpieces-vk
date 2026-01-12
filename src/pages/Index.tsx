@@ -178,22 +178,46 @@ export default function Index() {
             </div>
             
             <nav className="hidden md:flex gap-6">
-              <Button variant="ghost" className="font-semibold transition-all duration-300 hover:scale-110">
-                <Icon name="Home" size={18} className="mr-2" />
-                Рецепты
-              </Button>
-              <Button variant="ghost" className="font-semibold transition-all duration-300 hover:scale-110">
-                <Icon name="LayoutGrid" size={18} className="mr-2" />
-                Категории
-              </Button>
-              <Button variant="ghost" className="font-semibold transition-all duration-300 hover:scale-110">
-                <Icon name="MessageCircleQuestion" size={18} className="mr-2" />
-                Вопросы
-              </Button>
-              <Button variant="ghost" className="font-semibold transition-all duration-300 hover:scale-110">
-                <Icon name="Trophy" size={18} className="mr-2" />
-                Лучшие
-              </Button>
+              <div className="group relative cursor-pointer transition-all duration-300 hover:scale-110">
+                <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
+                  <img 
+                    src="https://cdn.poehali.dev/projects/069fe387-4bf4-4f00-b434-af9c3059a839/files/8e7de345-2d32-4940-ae64-1aa72523ba77.jpg" 
+                    alt="Рецепты"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Рецепты</span>
+              </div>
+              <div className="group relative cursor-pointer transition-all duration-300 hover:scale-110">
+                <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
+                  <img 
+                    src="https://cdn.poehali.dev/projects/069fe387-4bf4-4f00-b434-af9c3059a839/files/b310782e-fd32-404f-80a7-7aaf20e29734.jpg" 
+                    alt="Категории"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Категории</span>
+              </div>
+              <div className="group relative cursor-pointer transition-all duration-300 hover:scale-110">
+                <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
+                  <img 
+                    src="https://cdn.poehali.dev/projects/069fe387-4bf4-4f00-b434-af9c3059a839/files/88091773-1968-4dd7-9466-58e9fcff8f75.jpg" 
+                    alt="Вопросы"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Вопросы</span>
+              </div>
+              <div className="group relative cursor-pointer transition-all duration-300 hover:scale-110">
+                <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
+                  <img 
+                    src="https://cdn.poehali.dev/projects/069fe387-4bf4-4f00-b434-af9c3059a839/files/58e1ac7d-dd12-4f6e-b1b3-5d1e8e17f8d2.jpg" 
+                    alt="Лучшие"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Лучшие</span>
+              </div>
             </nav>
 
             <Button className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary shadow-lg transition-all duration-300 hover:scale-105">
