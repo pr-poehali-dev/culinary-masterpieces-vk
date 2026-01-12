@@ -5,7 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
-import Header from '@/components/Header';
 
 type Recipe = {
   id: number;
@@ -163,7 +162,47 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50">
-      <Header />
+      <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b-4 border-primary">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                <Icon name="ChefHat" className="text-white" size={24} />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  Вкусный Гид
+                </h1>
+                <p className="text-xs text-muted-foreground">Шедевры кулинарии</p>
+              </div>
+            </div>
+            
+            <nav className="hidden md:flex gap-6">
+              <Button variant="ghost" className="font-semibold">
+                <Icon name="Home" size={18} className="mr-2" />
+                Рецепты
+              </Button>
+              <Button variant="ghost" className="font-semibold">
+                <Icon name="LayoutGrid" size={18} className="mr-2" />
+                Категории
+              </Button>
+              <Button variant="ghost" className="font-semibold">
+                <Icon name="MessageCircleQuestion" size={18} className="mr-2" />
+                Вопросы
+              </Button>
+              <Button variant="ghost" className="font-semibold">
+                <Icon name="Trophy" size={18} className="mr-2" />
+                Лучшие
+              </Button>
+            </nav>
+
+            <Button className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary shadow-lg">
+              <Icon name="Plus" size={18} className="mr-2" />
+              Добавить рецепт
+            </Button>
+          </div>
+        </div>
+      </header>
 
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10"></div>
