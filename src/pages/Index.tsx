@@ -212,7 +212,7 @@ export default function Index() {
               🎉 Более 10 000 рецептов
             </Badge>
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
-              Кулинарные шедевры
+              Шедевры кулинарии
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
               Делитесь любимыми рецептами, оценивайте блюда и вдохновляйтесь
