@@ -166,7 +166,7 @@ export default function Index() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg transition-transform duration-300 hover:rotate-12 hover:scale-110">
                 <Icon name="ChefHat" className="text-white" size={24} />
               </div>
               <div>
@@ -178,25 +178,25 @@ export default function Index() {
             </div>
             
             <nav className="hidden md:flex gap-6">
-              <Button variant="ghost" className="font-semibold">
+              <Button variant="ghost" className="font-semibold transition-all duration-300 hover:scale-110">
                 <Icon name="Home" size={18} className="mr-2" />
                 Рецепты
               </Button>
-              <Button variant="ghost" className="font-semibold">
+              <Button variant="ghost" className="font-semibold transition-all duration-300 hover:scale-110">
                 <Icon name="LayoutGrid" size={18} className="mr-2" />
                 Категории
               </Button>
-              <Button variant="ghost" className="font-semibold">
+              <Button variant="ghost" className="font-semibold transition-all duration-300 hover:scale-110">
                 <Icon name="MessageCircleQuestion" size={18} className="mr-2" />
                 Вопросы
               </Button>
-              <Button variant="ghost" className="font-semibold">
+              <Button variant="ghost" className="font-semibold transition-all duration-300 hover:scale-110">
                 <Icon name="Trophy" size={18} className="mr-2" />
                 Лучшие
               </Button>
             </nav>
 
-            <Button className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary shadow-lg">
+            <Button className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary shadow-lg transition-all duration-300 hover:scale-105">
               <Icon name="Plus" size={18} className="mr-2" />
               Добавить рецепт
             </Button>
@@ -207,22 +207,22 @@ export default function Index() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-4 bg-secondary text-white px-4 py-2 text-sm">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in">
+            <Badge className="mb-4 bg-secondary text-white px-4 py-2 text-sm animate-scale-in">
               🎉 Более 10 000 рецептов
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight animate-fade-in" style={{animationDelay: '0.1s', animationFillMode: 'backwards'}}>
               Шедевры кулинарии
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground mb-8 animate-fade-in" style={{animationDelay: '0.2s', animationFillMode: 'backwards'}}>
               Делитесь любимыми рецептами, оценивайте блюда и вдохновляйтесь
             </p>
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary shadow-xl text-lg px-8">
+            <div className="flex gap-4 justify-center flex-wrap animate-fade-in" style={{animationDelay: '0.3s', animationFillMode: 'backwards'}}>
+              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary shadow-xl text-lg px-8 transition-all duration-300 hover:scale-105">
                 <Icon name="Search" size={20} className="mr-2" />
                 Найти рецепт
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8">
+              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 transition-all duration-300 hover:scale-105">
                 <Icon name="Sparkles" size={20} className="mr-2" />
                 Рецепт дня
               </Button>
@@ -234,16 +234,17 @@ export default function Index() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide">
-            {categories.map((category) => (
+            {categories.map((category, index) => (
               <Button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 variant={selectedCategory === category ? "default" : "outline"}
-                className={`whitespace-nowrap rounded-full px-6 py-2 transition-all hover-scale ${
+                className={`whitespace-nowrap rounded-full px-6 py-2 transition-all hover:scale-105 duration-300 animate-fade-in ${
                   selectedCategory === category 
                     ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg' 
                     : 'border-2 hover:border-primary'
                 }`}
+                style={{animationDelay: `${index * 0.05}s`, animationFillMode: 'backwards'}}
               >
                 {category}
               </Button>
@@ -259,8 +260,8 @@ export default function Index() {
               <Dialog key={recipe.id}>
                 <DialogTrigger asChild>
                   <Card 
-                    className="group cursor-pointer overflow-hidden border-2 hover:border-primary transition-all duration-300 hover-scale hover:shadow-2xl animate-fade-in"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    className="group cursor-pointer overflow-hidden border-2 hover:border-primary transition-all duration-500 hover:scale-105 hover:shadow-2xl animate-fade-in"
+                    style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'backwards' }}
                   >
                     <CardHeader className="p-0 relative">
                       <div className="relative h-64 overflow-hidden">
