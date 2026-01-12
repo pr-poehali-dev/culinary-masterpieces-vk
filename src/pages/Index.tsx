@@ -177,46 +177,46 @@ export default function Index() {
               </div>
             </div>
             
-            <nav className="hidden md:flex gap-6">
+            <nav className="hidden md:flex gap-6 bg-gradient-to-r from-orange-100/50 via-yellow-100/50 to-red-100/50 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-inner border border-orange-200/30">
               <div className="group relative cursor-pointer transition-all duration-300 hover:scale-110">
-                <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all ring-2 ring-white group-hover:ring-primary">
                   <img 
                     src="https://cdn.poehali.dev/projects/069fe387-4bf4-4f00-b434-af9c3059a839/files/8e7de345-2d32-4940-ae64-1aa72523ba77.jpg" 
                     alt="Рецепты"
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Рецепты</span>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity text-primary">Рецепты</span>
               </div>
               <div className="group relative cursor-pointer transition-all duration-300 hover:scale-110">
-                <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all ring-2 ring-white group-hover:ring-secondary">
                   <img 
                     src="https://cdn.poehali.dev/projects/069fe387-4bf4-4f00-b434-af9c3059a839/files/b310782e-fd32-404f-80a7-7aaf20e29734.jpg" 
                     alt="Категории"
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Категории</span>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity text-secondary">Категории</span>
               </div>
               <div className="group relative cursor-pointer transition-all duration-300 hover:scale-110">
-                <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all ring-2 ring-white group-hover:ring-accent">
                   <img 
                     src="https://cdn.poehali.dev/projects/069fe387-4bf4-4f00-b434-af9c3059a839/files/88091773-1968-4dd7-9466-58e9fcff8f75.jpg" 
                     alt="Вопросы"
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Вопросы</span>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity text-accent">Вопросы</span>
               </div>
               <div className="group relative cursor-pointer transition-all duration-300 hover:scale-110">
-                <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all ring-2 ring-white group-hover:ring-primary">
                   <img 
                     src="https://cdn.poehali.dev/projects/069fe387-4bf4-4f00-b434-af9c3059a839/files/58e1ac7d-dd12-4f6e-b1b3-5d1e8e17f8d2.jpg" 
                     alt="Лучшие"
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Лучшие</span>
+                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity text-primary">Лучшие</span>
               </div>
             </nav>
 
