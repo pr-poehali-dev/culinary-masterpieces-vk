@@ -223,29 +223,24 @@ export default function Index() {
         </div>
       </header>
 
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <Badge className="mb-4 bg-secondary text-white px-4 py-2 text-sm animate-scale-in">
-              🎉 Более 10 000 рецептов
-            </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight animate-fade-in" style={{animationDelay: '0.1s', animationFillMode: 'backwards'}}>
-              Шедевры кулинарии
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8 animate-fade-in" style={{animationDelay: '0.2s', animationFillMode: 'backwards'}}>
-              Делитесь любимыми рецептами, оценивайте блюда и вдохновляйтесь
-            </p>
-            <div className="flex gap-4 justify-center flex-wrap animate-fade-in" style={{animationDelay: '0.3s', animationFillMode: 'backwards'}}>
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary shadow-xl text-lg px-8 transition-all duration-300 hover:scale-105">
-                <Icon name="Search" size={20} className="mr-2" />
-                Найти рецепт
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 transition-all duration-300 hover:scale-105">
-                <Icon name="Sparkles" size={20} className="mr-2" />
-                Рецепт дня
-              </Button>
+      <section className="container mx-auto px-4 py-8">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{
+          backgroundImage: 'url(https://cdn.poehali.dev/files/130f35b1-2965-49bf-ae7b-bdf208f033ec.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          minHeight: '200px'
+        }}>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+          <div className="relative z-10 flex items-center justify-between px-12 py-8">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-2xl tracking-wide">
+                ШЕДЕВРЫ<br/>КУЛИНАРИИ
+              </h2>
             </div>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-6 rounded-full text-lg shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-2">
+              <Icon name="Bell" size={24} />
+              ПОДПИШИСЬ
+            </Button>
           </div>
         </div>
       </section>
